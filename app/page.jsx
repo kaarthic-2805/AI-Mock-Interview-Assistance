@@ -16,11 +16,13 @@ const LandingPage = () => {
   });
 
   const onSignin = () => {
-    router.push('http://localhost:3000/sign-in?redirect_url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard')
+    //router.push('http://localhost:3000/sign-in?redirect_url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard')
+    router.push('/sign-in?redirect_url=/dashboard')
   }
   
   const onSignup = () => {
-    router.push('http://localhost:3000/sign-up?redirect_url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard')
+    //router.push('http://localhost:3000/sign-up?redirect_url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard')
+    router.push('/sign-up?redirect_url=/dashboard')
   }
   const handleAuth = (e) => {
     e.preventDefault();
@@ -227,7 +229,8 @@ const LandingPage = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <button
-              onClick={() => { setShowAuth(true); setAuthMode('signup'); }}
+              //onClick={() => { setShowAuth(true); setAuthMode('signup'); }}
+              onClick={onSignup}
               className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2 shadow-lg"
             >
               <Play className="w-5 h-5" />
